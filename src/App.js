@@ -1,23 +1,35 @@
-import logo from './logo.svg';
 import './App.css';
+import Login from './pages/login'
+import Home from './pages/home';
+import PrivateRoute from './utils/PrivateRoute'
+import { useContext } from 'react';
+import {BrowserRouter as Router , Routes , Route , Link , Navigate} from 'react-router-dom'
+import  { AuthProvider } from './context/AuthContext';
+import AuthContext from './context/AuthContext'
+
 
 function App() {
+  let {name} = useContext(AuthContext)
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    
+      <Router>
+      
+        <p>{name}</p>
+        <p>{"{name}"}</p>
+        <Link to = "/" >to main</Link>
+        <Routes>
+
+         <Route path = "/"  element={ <Login /> }  />
+         <Route element={<PrivateRoute/>}>
+         <Route path = "/home"  element={ <Home/> }  />
+         </Route>
+         
+        
+
+        </Routes>
+      
+      </Router>
     </div>
   );
 }

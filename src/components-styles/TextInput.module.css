@@ -1,0 +1,35 @@
+*{ 
+    box-sizing: border-box;
+
+}
+
+.input {
+    width:400px;
+    height: 40px;
+    font-size: 25px;
+    padding: 10px;
+    outline: none;
+    background-color: #f7f7f7d0;
+    border: none ;
+    border-radius: 5px;
+    direction: rtl;
+}
+
+
+.input:focus , .input:hover {
+    background-color: white;
+    border: 1px solid #1592e6;
+
+}
+
+
+
+@media (max-width : 600px) {
+    .input{
+        width:280px ;
+        height: 40px;
+        font-size: 20px ;
+    }
+    
+    
+}

@@ -1,13 +1,11 @@
-import React , {useContext} from "react";
-import css from "../components-styles/TextInpt.module.css";
-import TestContext from "../context/testcontext";
+import React  from "react";
+import css from "../components-styles/TextInput.module.css";
 
 
 const TextInput = (prop) => {
-    let {test} = useContext(TestContext)
     return (
         <div>
-        <h1>{test}</h1>
+        
         <input 
         type        = 'text'
         placeholder = {prop.text} 
@@ -17,8 +15,6 @@ const TextInput = (prop) => {
         name        = {prop.name}
         >
         </input>
-
-
         </div>
 
     )

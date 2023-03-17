@@ -1,6 +1,16 @@
 .btn {
     width: auto;
     height: 50px;
-    background-color: rgb(44, 104, 201);
+    background-color:#0093ff;
     color: white;
+    border: none;
+    outline: none;
+    border-radius: 10px;
 }
+
+
+@media (max-width : 600px) {
+    .btn  {
+        height: 40px;
+        font-size: 20px ;
+    }}

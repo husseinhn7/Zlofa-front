@@ -1,0 +1,165 @@
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+    background-color: #eaedf7;
+}
+
+
+.mainDiv {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    width: 500px;
+    margin: 30px;
+    padding: 20px;
+    border-radius: 5px;
+    /* background-color: cadetblue; */
+    margin-left: 30%;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 2px 2px 10px 0px #aaa;
+    transition: 1s;
+
+}
+
+.mainDiv::before{
+    content: attr(con);
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    background-color: white;
+    top: calc(50%-25px);
+    left: -100px;
+    box-shadow:2px 2px 10px 0px #aaa ;
+    border-radius: 50%;
+
+}
+
+   
+.mainDiv:has(.input:focus) + .m::before {
+    border : 2px solid blue;
+}
+
+
+.input {
+    position: relative;
+    width:300px;
+    height: 40px;
+    font-size: 25px;
+    padding: 10px;
+    outline: none;
+    background-color: #f7f7f7d0;
+    border:1px solid #aaa ;
+    border-radius: 5px;
+    direction: rtl;
+}
+
+
+.n {
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    background-color: aqua;
+    margin:10px;
+    gap: 10px;
+    border: 1px solid #eee;
+    box-shadow: 2px 2px 10px 0px #aaa;
+
+}
+.btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: none ;
+    border: none;
+    font-size: 20px;
+    background-color: #eee;
+    float: right;
+}
+
+.hr {
+    width: 300px;
+}
+
+.q {
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    box-shadow:2px 2px 10px 0px #aaa ;
+
+}
+
+
+.btn:hover{
+    cursor: pointer;
+}
+
+
+.c{
+    background: #000;
+}
+
+.op{
+   
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+
+
+.v{
+    position: relative;
+}
+.ol {
+    position: relative;
+
+
+    
+}
+
+
+.v::before {
+    position: absolute;
+    content: '';
+    border: #000 solid 10px;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    top: 2px;
+    left: -50px;
+
+
+}
+
+.nm {
+    width: 95%;
+}
+@media (max-width : 600px) {
+    .input{
+        width:280px ;
+        height: 40px;
+        font-size: 20px ;
+    }
+
+    .mainDiv {
+        width: 80vw;
+    }
+    
+    
+}
